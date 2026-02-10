@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<students schoolName="Evergreen High School" academicYear="2025-2026">
+  <student id="S001">
+    <name>
+      <firstName>Aarav</firstName>
+      <lastName>Sharma</lastName>
+    </name>
+    <dateOfBirth>2008-04-12</dateOfBirth>
+    <gender>Male</gender>
+
+    <contact>
+      <email>aarav.sharma@example.com</email>
+      <phone>+977-9800000000</phone>
+    </contact>
+
+    <address>
+      <street>New Road</street>
+      <city>Kathmandu</city>
+      <stateProvince>Bagmati</stateProvince>
+      <country>Nepal</country>
+      <postalCode>44600</postalCode>
+    </address>
+
+    <program>
+      <grade>11</grade>
+      <section>A</section>
+      <rollNumber>12</rollNumber>
+    </program>
+
+    <guardian relation="Father">
+      <name>Ramesh Sharma</name>
+      <phone>+977-9811111111</phone>
+    </guardian>
+
+    <enrollmentStatus>Active</enrollmentStatus>
+  </student>
+
+  <student id="S002">
+    <name>
+      <firstName>Sita</firstName>
+      <lastName>Karki</lastName>
+    </name>
+    <dateOfBirth>2009-09-23</dateOfBirth>
+    <gender>Female</gender>
+
+    <contact>
+      <email>sita.karki@example.com</email>
+      <phone>+977-9812222222</phone>
+    </contact>
+
+    <address>
+      <street>Lakeside</street>
+      <city>Pokhara</city>
+      <stateProvince>Gandaki</stateProvince>
+      <country>Nepal</country>
+      <postalCode>33700</postalCode>
+    </address>
+
+    <program>
+      <grade>10</grade>
+      <section>B</section>
+      <rollNumber>7</rollNumber>
+    </program>
+
+    <guardian relation="Mother">
+      <name>Mina Karki</name>
+      <phone>+977-9803333333</phone>
+    </guardian>
+
+    <enrollmentStatus>Active</enrollmentStatus>
+  </student>
+</students>

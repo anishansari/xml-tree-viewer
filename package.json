@@ -1,0 +1,117 @@
+{
+  "name": "xml-tree-viewer",
+  "displayName": "XML Tree Viewer",
+  "description": "Visualize XML files as interactive tree structures with multiple views: parsed tree, JSON object view, Mermaid diagrams, and split view",
+  "version": "0.0.1",
+  "publisher": "AnishMiyaAnsari",
+  "icon": "images/icon.png",
+  "galleryBanner": {
+    "color": "#1a1a2e",
+    "theme": "dark"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YOUR_USERNAME/xml-tree-viewer"
+  },
+  "bugs": {
+    "url": "https://github.com/YOUR_USERNAME/xml-tree-viewer/issues"
+  },
+  "homepage": "https://github.com/YOUR_USERNAME/xml-tree-viewer#readme",
+  "keywords": [
+    "xml",
+    "tree",
+    "viewer",
+    "visualizer",
+    "mermaid",
+    "diagram",
+    "parser",
+    "structure",
+    "hierarchy",
+    "formatter"
+  ],
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Visualization",
+    "Formatters",
+    "Other"
+  ],
+  "activationEvents": [
+    "onLanguage:xml"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "xmlTreeViewer.openTreeView",
+        "title": "XML Tree Viewer: Open Tree View",
+        "icon": "$(list-tree)"
+      },
+      {
+        "command": "xmlTreeViewer.refreshSidebar",
+        "title": "XML Tree Viewer: Refresh Sidebar",
+        "icon": "$(refresh)"
+      }
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "when": "resourceExtname == .xml",
+          "command": "xmlTreeViewer.openTreeView",
+          "group": "navigation"
+        }
+      ],
+      "editor/context": [
+        {
+          "when": "resourceExtname == .xml",
+          "command": "xmlTreeViewer.openTreeView",
+          "group": "navigation"
+        }
+      ],
+      "view/title": [
+        {
+          "command": "xmlTreeViewer.refreshSidebar",
+          "when": "view == xmlTreeViewerSidebar",
+          "group": "navigation"
+        }
+      ]
+    },
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "xmlTreeViewer",
+          "title": "XML Tree Viewer",
+          "icon": "images/tree-icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "xmlTreeViewer": [
+        {
+          "id": "xmlTreeViewerSidebar",
+          "name": "XML Structure",
+          "contextualTitle": "XML Tree Viewer",
+          "icon": "images/tree-icon.svg"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "lint": "eslint src --ext ts",
+    "package": "vsce package",
+    "publish": "vsce publish"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@types/vscode": "^1.85.0",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "fast-xml-parser": "^4.3.2"
+  }
+}
