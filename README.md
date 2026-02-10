@@ -1,7 +1,7 @@
 # XML Tree Viewer
 
 <p align="center">
-  <img src="images/icon.svg" width="128" alt="XML Tree Viewer Logo">
+  <img src="images/icon.png" width="128" alt="XML Tree Viewer Logo">
 </p>
 
 <p align="center">
