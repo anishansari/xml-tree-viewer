@@ -27,22 +27,22 @@
 ### 📋 Parsed Tree View
 Beautiful indented text representation of your XML structure with syntax highlighting.
 
-![Parsed Tree](https://raw.githubusercontent.com/YOUR_USERNAME/xml-tree-viewer/main/screenshots/parsed-tree.png)
+![Parsed Tree](https://raw.githubusercontent.com/anishansari78/xml-tree-viewer/main/screenshots/parsed-tree.png)
 
 ### 🔣 Object View
 Interactive JSON-like collapsible tree. Expand/collapse nodes, copy as JSON.
 
-![Object View](https://raw.githubusercontent.com/YOUR_USERNAME/xml-tree-viewer/main/screenshots/object-view.png)
+![Object View](https://raw.githubusercontent.com/anishansari78/xml-tree-viewer/main/screenshots/object-view.png)
 
 ### 🔀 Graphical Tree (Mermaid Diagram)
 Visual flowchart representation of your XML hierarchy with zoom controls.
 
-![Graphical Tree](https://raw.githubusercontent.com/YOUR_USERNAME/xml-tree-viewer/main/screenshots/graphical-tree.png)
+![Graphical Tree](https://raw.githubusercontent.com/anishansari78/xml-tree-viewer/main/screenshots/graphical-tree.png)
 
 ### 📊 Split View
 Side-by-side view of parsed tree and graphical diagram.
 
-![Split View](https://raw.githubusercontent.com/YOUR_USERNAME/xml-tree-viewer/main/screenshots/split-view.png)
+![Split View](https://raw.githubusercontent.com/anishansari78/xml-tree-viewer/main/screenshots/split-view.png)
 
 ### 🌳 Sidebar Integration
 Always-visible XML structure in the activity bar with live updates as you edit.
@@ -152,5 +152,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 <p align="center">
-  Made with ❤️ by <a href="https://github.com/YOUR_USERNAME">Your Name</a>
+  Made with ❤️ by <a href="https://github.com/anishansari78">Your Name</a>
 </p>
