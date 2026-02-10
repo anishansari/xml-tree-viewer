@@ -5,5 +5,7 @@ samples/**
 node_modules/**
 .gitignore
 tsconfig.json
+webpack.config.js
 **/*.ts
 **/*.map
+out/**
