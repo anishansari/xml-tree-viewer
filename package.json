@@ -1,8 +1,8 @@
 {
   "name": "xml-tree-viewer",
   "displayName": "XML Tree Viewer",
-  "description": "Visualize XML files as interactive tree structures with multiple views: parsed tree, JSON object view, Mermaid diagrams, and split view",
-  "version": "0.0.2",
+  "description": "Visualize XML and DTD files as interactive structures with parsed tree, JSON object, Mermaid diagram, split view, and DTD-to-XML preview",
+  "version": "0.0.3",
   "publisher": "AnishMiyaAnsari",
   "icon": "images/icon.png",
   "galleryBanner": {
@@ -12,14 +12,15 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/anishansari78/xml-tree-viewer"
+    "url": "https://github.com/anishansari/xml-tree-viewer"
   },
   "bugs": {
-    "url": "https://github.com/anishansari78/xml-tree-viewer/issues"
+    "url": "https://github.com/anishansari/xml-tree-viewer/issues"
   },
-  "homepage": "https://github.com/anishansari78/xml-tree-viewer#readme",
+  "homepage": "https://github.com/anishansari/xml-tree-viewer#readme",
   "keywords": [
     "xml",
+    "dtd",
     "tree",
     "viewer",
     "visualizer",
@@ -39,7 +40,8 @@
     "Other"
   ],
   "activationEvents": [
-    "onLanguage:xml"
+    "onLanguage:xml",
+    "onLanguage:dtd"
   ],
   "main": "./dist/extension.js",
   "contributes": {
@@ -58,14 +60,14 @@
     "menus": {
       "editor/title": [
         {
-          "when": "resourceExtname == .xml",
+          "when": "resourceExtname == .xml || resourceExtname == .dtd",
           "command": "xmlTreeViewer.openTreeView",
           "group": "navigation"
         }
       ],
       "editor/context": [
         {
-          "when": "resourceExtname == .xml",
+          "when": "resourceExtname == .xml || resourceExtname == .dtd",
           "command": "xmlTreeViewer.openTreeView",
           "group": "navigation"
         }
@@ -102,6 +104,7 @@
     "vscode:prepublish": "npm run package-webpack",
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
+    "watch:webpack": "webpack --watch --mode development --devtool source-map",
     "package-webpack": "webpack --mode production --devtool hidden-source-map",
     "lint": "eslint src --ext ts",
     "package": "vsce package",
@@ -116,6 +119,7 @@
     "webpack-cli": "^6.0.1"
   },
   "dependencies": {
-    "fast-xml-parser": "^4.3.2"
+    "fast-xml-parser": "^4.3.2",
+    "typesxml": "^1.17.0"
   }
 }

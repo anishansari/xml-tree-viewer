@@ -6,6 +6,12 @@ import { XmlTreeDataProvider } from './treeDataProvider';
 export function activate(context: vscode.ExtensionContext) {
   console.log('XML Tree Viewer is now active!');
 
+  const isXmlFile = (fileName: string): boolean => path.extname(fileName).toLowerCase() === '.xml';
+  const isXmlOrDtdFile = (fileName: string): boolean => {
+    const ext = path.extname(fileName).toLowerCase();
+    return ext === '.xml' || ext === '.dtd';
+  };
+
   // Create sidebar tree data provider
   const treeDataProvider = new XmlTreeDataProvider();
   vscode.window.createTreeView('xmlTreeViewerSidebar', {
@@ -16,7 +22,7 @@ export function activate(context: vscode.ExtensionContext) {
   // Auto-refresh sidebar when active editor changes
   const updateSidebar = () => {
     const editor = vscode.window.activeTextEditor;
-    if (editor && editor.document.fileName.endsWith('.xml')) {
+    if (editor && isXmlFile(editor.document.fileName)) {
       treeDataProvider.refresh(editor.document.getText());
     } else {
       treeDataProvider.refresh(undefined);
@@ -31,7 +37,7 @@ export function activate(context: vscode.ExtensionContext) {
   // Refresh on document save
   context.subscriptions.push(
     vscode.workspace.onDidSaveTextDocument((doc) => {
-      if (doc.fileName.endsWith('.xml')) {
+      if (isXmlFile(doc.fileName)) {
         updateSidebar();
       }
     })
@@ -41,7 +47,7 @@ export function activate(context: vscode.ExtensionContext) {
   context.subscriptions.push(
     vscode.workspace.onDidChangeTextDocument((e) => {
       const editor = vscode.window.activeTextEditor;
-      if (editor && e.document === editor.document && e.document.fileName.endsWith('.xml')) {
+      if (editor && e.document === editor.document && isXmlFile(e.document.fileName)) {
         treeDataProvider.refresh(e.document.getText());
       }
     })
@@ -51,13 +57,13 @@ export function activate(context: vscode.ExtensionContext) {
   const openTreeViewCmd = vscode.commands.registerCommand('xmlTreeViewer.openTreeView', () => {
     const editor = vscode.window.activeTextEditor;
     if (!editor) {
-      vscode.window.showWarningMessage('No active editor. Open an XML file first.');
+      vscode.window.showWarningMessage('No active editor. Open an XML or DTD file first.');
       return;
     }
 
     const doc = editor.document;
-    if (!doc.fileName.endsWith('.xml')) {
-      vscode.window.showWarningMessage('Active file is not an XML file.');
+    if (!isXmlOrDtdFile(doc.fileName)) {
+      vscode.window.showWarningMessage('Active file is not an XML or DTD file.');
       return;
     }
 

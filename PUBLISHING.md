@@ -3,27 +3,27 @@
 ## 📋 Pre-Publishing Checklist
 
 ### 1. Update Your Info
-Before publishing, update these files with your actual information:
+Before publishing, verify these project values are correct:
 
-**package.json** - Update these fields:
+**package.json** - Current expected values:
 ```json
 {
-  "publisher": "your-publisher-id",  // Your VS Code Marketplace publisher ID
+  "publisher": "AnishMiyaAnsari",
   "repository": {
     "type": "git",
-    "url": "https://github.com/YOUR_USERNAME/xml-tree-viewer"
+    "url": "https://github.com/anishansari/xml-tree-viewer"
   },
   "bugs": {
-    "url": "https://github.com/YOUR_USERNAME/xml-tree-viewer/issues"
+    "url": "https://github.com/anishansari/xml-tree-viewer/issues"
   },
-  "homepage": "https://github.com/YOUR_USERNAME/xml-tree-viewer#readme"
+  "homepage": "https://github.com/anishansari/xml-tree-viewer#readme"
 }
 ```
 
-**README.md** - Replace:
-- `YOUR_USERNAME` with your GitHub username
-- `Your Name` with your actual name
-- Update screenshot URLs once you have them
+**README.md** - Verify:
+- GitHub links use `https://github.com/anishansari/...`
+- Footer author text is not a placeholder
+- Screenshot/image links load from raw GitHub URLs
 
 ### 2. Take Screenshots
 Create a `screenshots` folder and capture:

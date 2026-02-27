@@ -1,23 +1,17 @@
 # XML Tree Viewer
 
 <p align="center">
-  <img src="images/icon.png" width="128" alt="XML Tree Viewer Logo">
+  <img src="https://raw.githubusercontent.com/anishansari/xml-tree-viewer/main/images/icon.png" width="128" alt="XML Tree Viewer Logo">
 </p>
 
 <p align="center">
-  <strong>Visualize XML files as interactive tree structures with multiple views</strong>
+  <strong>Visualize XML/DTD files as interactive structures with multiple views</strong>
 </p>
 
 <p align="center">
-  <a href="https://marketplace.visualstudio.com/items?itemName=xml-tree-viewer.xml-tree-viewer">
-    <img src="https://img.shields.io/visual-studio-marketplace/v/xml-tree-viewer.xml-tree-viewer?style=flat-square" alt="Version">
-  </a>
-  <a href="https://marketplace.visualstudio.com/items?itemName=xml-tree-viewer.xml-tree-viewer">
-    <img src="https://img.shields.io/visual-studio-marketplace/i/xml-tree-viewer.xml-tree-viewer?style=flat-square" alt="Installs">
-  </a>
-  <a href="https://marketplace.visualstudio.com/items?itemName=xml-tree-viewer.xml-tree-viewer">
-    <img src="https://img.shields.io/visual-studio-marketplace/r/xml-tree-viewer.xml-tree-viewer?style=flat-square" alt="Rating">
-  </a>
+  <a href="https://marketplace.visualstudio.com/items?itemName=AnishMiyaAnsari.xml-tree-viewer">VS Code Marketplace</a>
+  •
+  <a href="https://github.com/anishansari/xml-tree-viewer">GitHub Repository</a>
 </p>
 
 ---
@@ -27,31 +21,36 @@
 ### 📋 Parsed Tree View
 Beautiful indented text representation of your XML structure with syntax highlighting.
 
-![Parsed Tree](https://raw.githubusercontent.com/anishansari78/xml-tree-viewer/main/screenshots/parsed-tree.png)
+![Parsed Tree](https://raw.githubusercontent.com/anishansari/xml-tree-viewer/main/images/s1.png)
 
 ### 🔣 Object View
 Interactive JSON-like collapsible tree. Expand/collapse nodes, copy as JSON.
 
-![Object View](https://raw.githubusercontent.com/anishansari78/xml-tree-viewer/main/screenshots/object-view.png)
+![Object View](https://raw.githubusercontent.com/anishansari/xml-tree-viewer/main/images/s2.png)
 
 ### 🔀 Graphical Tree (Mermaid Diagram)
-Visual flowchart representation of your XML hierarchy with zoom controls.
+Visual flowchart representation of your XML hierarchy with zoom controls and **Save as Image** (PNG export) button.
 
-![Graphical Tree](https://raw.githubusercontent.com/anishansari78/xml-tree-viewer/main/screenshots/graphical-tree.png)
+![Graphical Tree](https://raw.githubusercontent.com/anishansari/xml-tree-viewer/main/images/s3.png)
 
 ### 📊 Split View
 Side-by-side view of parsed tree and graphical diagram.
 
-![Split View](https://raw.githubusercontent.com/anishansari78/xml-tree-viewer/main/screenshots/split-view.png)
+![Split View](https://raw.githubusercontent.com/anishansari/xml-tree-viewer/main/images/s4.png)
 
 ### 🌳 Sidebar Integration
 Always-visible XML structure in the activity bar with live updates as you edit.
+
+![Sidebar](https://raw.githubusercontent.com/anishansari/xml-tree-viewer/main/images/s5.png)
+
+### 🧩 DTD Support
+Open `.dtd` files to generate a starter XML skeleton preview and copy it with one click.
 
 ---
 
 ## 🚀 Getting Started
 
-1. Open any `.xml` file in VS Code
+1. Open any `.xml` or `.dtd` file in VS Code
 2. Click the **tree icon** in the editor title bar, or
 3. Right-click in the editor and select **"XML Tree Viewer: Open Tree View"**, or
 4. Use the sidebar panel (tree icon in the activity bar)
@@ -68,6 +67,8 @@ Always-visible XML structure in the activity bar with live updates as you edit.
 | Zoom Diagram | Use +/- buttons or Reset in Graphical Tree view |
 | Expand/Collapse | Click ▼/▶ toggles in Object View, or use Expand All / Collapse All |
 | Refresh Sidebar | Click refresh icon in sidebar title |
+| **Save Diagram as Image** | Click **Save as Image** button in Graphical Tree view |
+| **Generate XML from DTD** | Open a `.dtd` file and use the **Copy XML** button |
 
 ---
 
@@ -100,11 +101,17 @@ Always-visible XML structure in the activity bar with live updates as you edit.
 - Color-coded nodes: root (blue), branches (green), leaves (orange)
 - Zoom in/out and reset controls
 - Copy Mermaid code for use elsewhere
+- **Save as Image**: Export the diagram as a PNG file with one click
 
 ### Split View
 - Parsed tree and graphical diagram side-by-side
 - Great for large XML files
 - Responsive layout
+
+### DTD Preview
+- Converts DTD declarations to a minimal XML skeleton
+- Handles required/default attributes
+- Includes a one-click "Copy XML" action
 
 ---
 
@@ -117,12 +124,18 @@ Always-visible XML structure in the activity bar with live updates as you edit.
 
 ## 📝 Release Notes
 
+### 0.0.3
+- Added `.dtd` file support in editor title/context actions
+- Added DTD to XML skeleton preview with copy button
+- Improved PNG export reliability for graphical diagram view
+
 ### 0.0.1
 - Initial release
 - Four view modes: Parsed Tree, Object View, Graphical Tree, Split View
 - Sidebar integration with live updates
 - Copy to clipboard functionality
 - Zoom controls for diagrams
+- **Save as Image** button in Graphical Tree view
 
 ---
 
@@ -148,9 +161,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - [Mermaid](https://mermaid.js.org/) for diagram rendering
 - [fast-xml-parser](https://github.com/NaturalIntelligence/fast-xml-parser) for XML parsing
+- [typesxml](https://www.npmjs.com/package/typesxml) for DTD parsing support
 
 ---
 
 <p align="center">
-  Made with ❤️ by <a href="https://github.com/anishansari78">Your Name</a>
+  Made with ❤️ by <a href="https://github.com/anishansari">anishansari</a>
 </p>
