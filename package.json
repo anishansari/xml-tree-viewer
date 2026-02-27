@@ -2,7 +2,7 @@
   "name": "xml-tree-viewer",
   "displayName": "XML Tree Viewer",
   "description": "Visualize XML and DTD files as interactive structures with parsed tree, JSON object, Mermaid diagram, split view, and DTD-to-XML preview",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "publisher": "AnishMiyaAnsari",
   "icon": "images/icon.png",
   "galleryBanner": {
